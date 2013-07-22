@@ -1,0 +1,3 @@
+$("#lucky").rotate({angle:0,animateTo:30,duration:5000,callback:function(){
+});
+DD_belatedPNG.fix(".pngfix");

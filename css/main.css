@@ -1,0 +1,3325 @@
+
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+ background: #b3d4fc;
+ text-shadow: none;
+}
+::selection {
+	background: #b3d4fc;
+	text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
+}
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+	resize: vertical;
+}
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+/* Author: yves.luo@d1miao.com*/
+
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #fff;
+}
+body, input, textarea {
+    font-family:"微软雅黑", "宋体", Arial, Helvetica, sans-serif;
+    font-weight:normal;
+    font-size:14px;
+    line-height:22px;
+    vertical-align: baseline;
+}
+html, body, button, input, select, textarea, a, a:active, a:visited {
+	color: #454545;
+}
+input.text-field {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	line-height: 1;
+}
+.align-right {
+	text-align: right;
+}
+a img {
+	border: 0;
+	outline: 0;
+}
+.logo {
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 380px;
+	height: 66px;
+	margin-top: 15px;
+	text-indent: -9999px;
+	background-color: transparent;
+	background-image: url(../img/login_taobao/logo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0;
+}
+.blue-text{
+    color:#519BE3;
+}
+a.blue-text{
+    text-decoration:none;
+    color:#519BE3;
+}
+.button, .notice-tab, .icon, .share-nav ul {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+}
+.follower-no {
+	height: 22px;
+	padding-left: 10px;
+	background: url(../img/sprite.gif) no-repeat 0 -203px;
+}
+.follower-no span {
+	display: block;
+	height: 12px;
+	padding: 5px 5px 5px 0;
+	background: url(../img/sprite.gif) no-repeat right -203px;
+}
+.follow-weibo {
+	top: 5px;
+	overflow: hidden;
+	width: 62px;
+	height: 0;
+	padding-top: 22px;
+	background: url(../img/sprite.gif) repeat 0 -52px;
+}
+.reward-ten-per, .shipping-free-99, .new {
+	width: 37px;
+	height: 0;
+	padding-top: 18px;
+	overflow: hidden;
+	background: url(../img/sprite.gif) no-repeat 0 0;
+	text-indent: -9999px;
+}
+.shipping-free-99 {
+	width: 54px;
+	background-position: 0 -34px;
+}
+.new {
+	width: 21px;
+	padding-top: 10px;
+	background-position: -102px -57px;
+}
+.paste-link-here {
+	width: 197px;
+	height: 0;
+	padding-top: 30px;
+	overflow: hidden;
+	background: url(../img/sprite.gif) no-repeat 0 -74px;
+}
+.icon-help{
+	width: 26px;
+	height: 24px;
+	background-image: url(../img/new_index/index_ask.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+.icon-service {
+	background-position: -551px 0;
+}
+.q-zon, .weibo, .qq, .renren, .doudan, .taobao {
+	height: 16px;
+	overflow: hidden;
+	background: url(../img/sprite.gif) no-repeat -573px 0;
+	width: 16px;
+	text-indent: -9999px;
+	display: block;
+}
+.q-zon {
+	background-position: -218px -98px;
+}
+.weibo {
+	background-position: -268px -49px;
+}
+.qq {
+	background-position: -244px -98px;
+}
+.renren {
+	background-position: -218px -98px;
+}
+.doudan {
+	background-position: -244px -49px;
+}
+.taobao {
+	background-position: -244px -74px;
+}
+/* menu */
+.nav {
+	line-height: 1;
+}
+.nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.nav a {
+	text-decoration: none;
+}
+.horizontal ul {
+	word-spacing: 0;
+}
+.horizontal ul li {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+}
+.horizontal ul li a {
+	display: block;
+	line-height: 22px;
+	position: relative;
+	overflow: visible;
+}
+.topNavRight {
+	position: absolute;
+	right: 0px;
+	top: 5px;
+}
+.top-nav {
+	position: relative;
+	height: 34px;
+	background: #F8F8F8 url(../img/bg-repeat.jpg) repeat 0 0;
+	font-size: 12px;
+	color: #333333;
+}
+.top-nav ul li {
+	height: 22px;
+	padding: 0 20px;
+	background: url(../img/sprite.gif) no-repeat -598px -134px;
+	white-space: nowrap;
+	float: left;
+	display: block;
+}
+.top-nav ul li.first {
+	background-image: none;
+}
+.greeting {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+}
+.greeting {
+	line-height: 32px;
+	vertical-align: top;
+	_vertical-align: top;
+    display:inline;
+}
+.login {
+	text-indent: -9999px;
+	width: 76px;
+	height: 22px;
+	vertical-align: top;
+	_vertical-align: top;
+	display: inline-block;
+	position: relative;
+	top: 5px;
+	margin-right: 6px;
+}
+.qqLogin {
+	background-image: url(../img/login_taobao/login_qq.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+.taobaoLogin {
+	background-image: url(../img/login_taobao/login_taobao.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 83px;
+}
+.weiboLogin {
+	background-image: url(../img/login_taobao/login_weibo.png);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	width: 83px;
+}
+.quit {
+	background-image: url(../img/login_taobao/logout.gif);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	padding-left: 18px;
+}
+a.normlGuest, a.diamondGuest {
+	background-image: url(../img/login_taobao/normal_gust.png);
+	background-repeat: no-repeat;
+	padding-right: 16px;
+	margin-left: 0;
+	background-position: right 3px;
+}
+a.diamondGuest {
+	background-image: url(../img/login_taobao/diamond_gust.png);
+}
+
+.top-nav .reward-ten-per {
+	right: 0px;
+	top: 3px;
+ *top:-2px;
+	_right: 10px;
+	position: absolute;
+	width: 40px;
+	height: 15px;
+	display: block;
+	text-indent: -9999px;
+	padding-top: 0px;
+	background-image: url(../img/login_taobao/top_reward5.png);
+	background-repeat: no-repeat;
+	background-position: 0 0px;
+}
+a.mail{
+	background-image: url(../img/message/close-letter.gif);
+	background-repeat: no-repeat;
+	padding-left: 18px;	
+}
+.top-nav .mail {
+	background-position: 0 5px;
+}
+.hasmail{
+	background-image:url(../img/mail.gif) !important;
+	background-position:middle 0px!important;
+	background-repeat:no-repeat!important;
+}
+/* main menu */
+.main-nav {
+	z-index: 100;
+	position: relative;
+	height: 36px;
+	box-shadow: 0px 5px 5px #d2d2d2;
+	background-color: #C8C8C8;
+	background-image: url(../img/bg-repeat.jpg);
+	background-repeat: repeat-x;
+	background-position: 0 -34px;
+}
+.main-nav ul li {
+	position: relative;
+}
+.main-nav a {
+	position: relative;
+	display: block;
+	line-height: 20px;
+	padding: 8px 35px;
+	font-size: 15px;
+	font-weight: bold;
+	line-height: 20px;
+	color: #FFF;
+	word-spacing: normal;
+}
+.main-nav a:hover {
+	color: #FF9;
+}
+.main-nav .current a {
+	background: #000 url(../img/bg-repeat.jpg) repeat 0 -70px;
+}
+.main-nav ul li .notice-tab {
+	position: absolute;
+	top: -10px;
+	left: 80px;
+}
+.main-nav .side-nav li a {
+	padding-left: 27px;
+	padding-right: 3px;
+	color: white;
+}
+.main-nav .side-nav li a .icon {
+	position: absolute;
+	top: 7px;
+	left: 0px;
+	_left: -23px;
+	_top: 5px;
+}
+.search {
+	position: relative;
+	float: left;
+	width: 675px;
+	height: 45px;
+	margin-left:163px;
+}
+.search .text-field {
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 527px;
+	padding: 12px;
+	border: 0;
+	background-color: transparent;
+	outline:0px;
+}
+.search .submit {
+	position: absolute;
+	top: 0px;
+	right: 0;
+	width: 122px;
+	height: 45px;
+	border: 0;
+	background-color: transparent;
+}
+.search .notice-tab {
+	position: absolute;
+	top: 60px;
+	left: 0;
+}
+.wrapper {
+	position: relative;
+	width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 5;
+}
+.left {
+	float: left;
+	position: relative;
+}
+.right {
+	float: right;
+}
+.page-body {
+	padding: 10px 0;
+	background-color: #efefef;
+}
+.body-block {
+	margin: 10px 0;
+	border-radius: 5px;
+	width: 980px;
+}
+.login-taobao {
+	width: 278px;
+	height: 358px;
+	overflow: hidden;
+	
+	background-color: #ffeac8;
+	position: relative;
+	float: left;
+	_zoom: 1;
+	margin-top: 10px;
+	border-radius: 3px;
+}
+.slideshow-ad {
+    position:relative;
+    width: 680px;
+    height: 356px;
+    margin-left: 20px;
+    overflow: hidden;
+    background-color: #fff;
+    border: 1px solid #e3e3e3;
+    float: left;
+    margin-top: 10px;
+    border-radius: 3px;
+    _zoom: 1;
+}
+.slideshow-ad .slides_container{
+    width: 680px;
+    height: 356px;
+}
+.slideshow-ad .pagination{
+    z-index:999;
+    position:absolute;
+    left:20px;
+    bottom:20px;
+}
+.slideshow-ad .pagination li{
+    border:0;
+    height:15px;
+    width:15px;
+    margin:0 3px;
+    background:url(../img/bg-slide-pagination.png) no-repeat right 0;
+}
+.slideshow-ad .pagination li a{
+    border:0;
+    height:15px;
+    width:15px;
+    padding:0;
+    margin:0;
+    overflow:none;
+    text-indent:-9999px;
+}
+.slideshow-ad .pagination li.current{
+    background-position: 0 0;
+}
+.category {
+	width: 620px;
+	height: 348px;
+	margin-left: 20px;
+	padding: 4px 30px;
+	overflow: hidden;
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	float: left;
+	margin-top: 10px;
+	border-radius: 3px;
+	_zoom: 1;
+}
+.category .block-header {
+	position: relative;
+	background-image: url(../img/brandLine.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.swith-tab .block-header ul li {
+	position: relative;
+	bottom: -1px;
+}
+.swith-tab .block-header ul li a {
+	padding: 10px;
+	font-size: 12px;
+}
+.swith-tab .block-header ul li.current {
+	font-size: 12px;
+	background-image: url(../img/switch-tab-current.jpg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+.swith-tab .block-header h2{
+    color: #FE4800;
+    font-family: "宋体",Arial;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    margin:15px 0;
+}
+.swith-tab .block-main {
+	overflow: hidden;
+}
+.swith-tab .block-main ul li {
+}
+.home .product-list.body-block {
+	width: 938px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #e3e3e3;
+	overflow: hidden;
+	_zoom: 1;
+	border-radius: 3px;
+}
+.home .product-list.body-block .block-header {
+	border-bottom: 1px solid #FE4800;
+}
+.indexProduct .product {
+	float: left;
+	width: 277px;
+	height: 403px;
+	padding: 10px;
+	margin-top: 20px;
+	border: 1px solid #e3e3e3;
+	margin-right: 20px;
+}
+.indexProduct .product.first {
+}
+.indexProduct .product h3.product-header {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 18px;
+	margin: 2px 0px;
+	padding-bottom: 8px;
+    height:36px
+}
+.indexProduct .product .product-body {
+	position: relative;
+	height: 345px;
+	overflow: hidden;
+	
+	background: url(../img/bg-repeat.jpg) repeat-x 0 bottom;
+	border-radius: 0 0 5px 5px;
+	color: #fff;
+	font-size: 12px;
+	z-index: 5;
+}
+.indexProduct .product .pic {
+	height: 401px;
+	height: 279px;
+	overflow: hidden;
+	background-color: #fff;
+}
+.indexProduct .product .reward, .indexProduct .product .old-price, .indexProduct .product .time-left, .indexProduct .product .price, .indexProduct .product .more {
+	position: absolute;
+}
+.indexProduct .product .reward {
+	width: 100%;
+	bottom: 66px;
+	padding: 5px 0;
+	background: url(../img/bg-black-trans.png) repeat;
+	text-align: right;
+	z-index: 100;
+	display: block;
+}
+.indexProduct .product .price {
+	left: 10px;
+	bottom: 10px;
+	font-family: Arial;
+	font-weight: bold;
+	font-size: 30px;
+}
+.indexProduct .product .old-price {
+	left: 10px;
+	bottom: 45px;
+}
+.indexProduct .product .time-left {
+	right: 10px;
+	bottom: 45px;
+	line-height: 16px;
+}
+.indexProduct .product .more {
+	right: 10px;
+	bottom: 10px;
+	width: 103px;
+	height: 32px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background-image: url(../img/sprite.png);
+	background-repeat: no-repeat;
+	background-position: -67px -24px;
+}
+.go-top {
+	display: block;
+	position: fixed;
+	bottom: 20px;
+	width: 53px;
+	height: 52px;
+	overflow: hidden;
+	background: url(../img/sprite.gif) no-repeat -300px -45px;
+	text-indent: -9999px;
+	right: 100px;
+}
+/* footer */
+.footer {
+	font-size: 12px;
+	padding: 20px 0 45px 0;
+	/* [disabled]box-shadow: 0px -5px 5px #d2d2d2;
+*/
+	background-image: url(../img/footer_shadow.png);
+	background-repeat: repeat-x;
+	background-position: top;
+	background-color: #ffffff;
+	position: relative;
+    z-index:1;
+}
+.signature, .footer-nav {
+	margin: 5px 0;
+	width: 500px;
+}
+.signature {
+	clear: left;
+	font-family: Arial, simsun;
+}
+.footer-nav ul li {
+	padding: 0 20px;
+}
+.share-nav ul /* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+	background-color: transparent;
+	border: 0;
+	overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+.ir:before {
+	content: "";
+	display: block;
+	width: 0;
+	height: 150%;
+}
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+	visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+	content: " "; /* 1 */
+	display: table; /* 2 */
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+ *zoom: 1;
+}
+.reward10 {
+	padding-right: 42px;
+}
+.menuBar {
+	height: 34px;
+	margin-top: 2px;
+	float: left;
+	width: auto;
+}
+.menuBar li {
+	float: left;
+}
+.main-nav .menuBar li a {
+	line-height: 20px;
+	color: white;
+}
+.main-nav .menuBar li a:hover {
+	color: yellow;
+}
+.main-nav .side-nav li a:hover {
+	color: yellow;
+}
+.wrapper .menuRight {
+	position: absolute;
+	height: 34px;
+	right: 0px;
+	top: 0px;
+}
+.wrapper .menuRight li {
+	float: left;
+}
+.advantageTips {
+	list-style-type: none;
+	padding: 0px;
+	height:212px;
+	background-image: url(../img/new_index/advantage_tips.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.advantageTips li {
+	height: 49px;
+	width: 236px;
+	text-indent: -9999px;
+}
+.advantageTips .tips01 {
+	background-image: url(../img/login_taobao/regards_tip01.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.advantageTips .tips02 {
+	background-image: url(../img/login_taobao/regards_tip02.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.advantageTips .tips03 {
+	background-image: url(../img/login_taobao/regards_tip03.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.advantageTips .tips04 {
+	background-image: url(../img/login_taobao/regards_tip04.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.TaobaoLoginButton, .TaobaoLoginButton-taobao-only {
+    background-image: url(../img/login_taobao/login_bg.png);
+    background-position: 0px 0px;
+	background-repeat:no-repeat;
+    height: 145px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-indent: -9999px;
+    position: relative;
+}
+.TaobaoLoginButton-taobao-only{
+	background-image: url(../img/new_index/login_bg.png);
+}
+.login-taobao .TaobaoLoginButton, .login-taobao .TaobaoLoginButton-taobao-only {
+	margin-top: 0px;
+}
+.login-taobao .newGuy {
+	line-height: 18px;
+	background-image: url(../img/login_taobao/icon_new.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	padding-left: 22px;
+	position: absolute;
+	top: 328px;
+	font-size: 12px;
+	left: 20px;
+	color: #666666;
+}
+.login-taobao .getReword {
+	line-height: 18px;
+	background-image: url(../img/login_taobao/icon_back.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: block;
+	padding-left: 22px;
+	position: absolute;
+	top: 328px;
+	right: 19px;
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+.login-taobao .getReword span {
+	color: #fe4a03;
+}
+.brandListTitle {
+	display: block;
+	overflow: hidden;
+	_zoom: 1;
+}
+.brandListTitle ul li {
+	float: left;
+}
+.brandListMain {
+	display: block;
+	position: relative;
+	_zoom: 1;
+}
+.brandListMain ul li {
+	float: left;
+}
+.brandListTitle ul {
+	overflow: hidden;
+}
+.brandListMain ul li {
+	float: left;
+	width: 94px;
+	margin-right: 11px;
+	height: 54px;
+	margin-top: 13px;
+}
+.homeTab .current li a{
+	padding:6px;
+	border:1px solid #ffffff;
+}
+.homeTab .current li a:hover{
+	border-radius:3px;
+	border:1px solid rgb(255,128,68);
+}
+.brandListMain ul {
+	width: 648px;
+	display: none;
+}
+.brandListMain .current {
+	display: block;
+}
+.footer-nav ul li {
+	float: left;
+	background-image: url(../img/footer_nav_line.png);
+	background-repeat: no-repeat;
+	background-position: right;
+}
+.share-nav ul li {
+	float: left;
+}
+.share-nav {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+.share-nav ul li a {
+	display: block;
+	padding-left: 5px;
+}
+.share-nav .shareMySite {
+	float: left;
+	font-size: 12px;
+	line-height: 27px;
+}
+.footer-nav ul .last {
+	background-image: none;
+}
+.footer-nav ul .first {
+	padding-left: 0px;
+}
+.rewardsGuid {
+    margin-top:8px;
+	background-image: url(../img/search_guide/howToGetRewards.png);
+	background-position: 3px 30px;
+	height: 290px;
+	width: 978px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #e3e3e3;
+	border-radius: 3px;
+	background-color: #FFF;
+	padding-top: 33px;
+	padding-bottom: 37px;
+	background-repeat: no-repeat;
+	box-shadow: 0px 0px 1px #CCC;
+	position: relative;
+}
+.rewardsGuid .quickTaobao {
+	background-image: url(../img/search_guide/quick_taobao.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 57px;
+	width: 143px;
+	position: absolute;
+	left: 200px;
+	top: 23px;
+	z-index: 100;
+}
+.rewardsGuid .quickTmall {
+	background-image: url(../img/search_guide/quick_tmall.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 57px;
+	width: 143px;
+	position: absolute;
+	left: 362px;
+	top: 23px;
+	z-index: 100;
+}
+.rewardsGuid .quickJu {
+	background-image: url(../img/search_guide/quick_ju.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 57px;
+	width: 143px;
+	position: absolute;
+	left: 524px;
+	top: 23px;
+	z-index: 100;
+}
+.quickMenu {
+	position: relative;
+}
+.quickMenu ul {
+	position: absolute;
+	top: 54px;
+	left: 0px;
+	background-image: url(../img/search_guide/3slider_down_03.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding-bottom: 3px;
+	display: none;
+}
+.quickMenu ul li a {
+	font-size: 12px;
+	line-height: 28px;
+	text-decoration: none;
+	color: #9e9e9e;
+	width: 100%;
+	height: 100%;
+	text-algin: center;
+	display: block;
+}
+.quickMenu ul li a:hover {
+	background-color: #fff5f1;
+}
+.quickMenu ul li {
+	width: 140px;
+	display: block;
+	text-align: center;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #acacac;
+	border-left-color: #dfdfdf;
+}
+.rewardsGuid .quickTaobaoHover {
+    background-image: url(../img/search_guide/quick_taobao02.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.rewardsGuid .quickTmallHover {
+    background-image: url(../img/search_guide/quick_tmall02.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.rewardsGuid .quickJuHover {
+    background-image: url(../img/search_guide/quick_ju02.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+.rewardsGuid .cannotUse {
+	background-image: url(../img/search_guide/guide_cant.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 34px;
+	width: 92px;
+	position: absolute;
+	left: 745px;
+	top: 33px;
+}
+.rewardsGuid .newTutorial {
+	background-image: url(../img/search_guide/totural.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	position: absolute;
+	left: 845px;
+	top: 33px;
+	height: 34px;
+	width: 112px;
+}
+.rewardsGuid .searchbar {
+	position: absolute;
+	left: 280px;
+	top: 266px;
+	background-image: url(../img/search_guide/searchBar.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 36px;
+	width: 550px;
+}
+.searchbar form .text-field {
+	width: 400px;
+	font-size: 14px;
+	line-height: 1;
+	margin-top: 2px;
+	display: block;
+	border: 0px;
+	padding: 7px;
+	background-color: transparent;
+	float: left;
+	outline:0px;
+}
+.searchbar form .submit {
+	position: absolute;
+	top: 1px;
+	right: -1px;
+	width: 122px;
+	height: 35px;
+	border: 0;
+	background-color: transparent;
+}
+.searchbar form {
+	position: relative;
+}
+.rewardsGuid .howToGetAddress {
+	display: block;
+	position: absolute;
+	left: 846px;
+	top: 278px;
+	font-size: 12px;
+	text-decoration: none;
+}
+.productLeft {
+	float: left;
+	width: 240px;
+	height: 500px;
+	overflow: visible;
+    position: relative;
+	z-index:1000;
+}
+.productLeftMenu {
+	width: 238px;
+	border: 1px solid #fe4800;
+	height: auto;
+	margin-top: 20px;
+	border-radius: 3px;
+	top: 0px;
+    z-index:1000;
+	position:absolute;
+}
+.productLeftMenu .listTitle {
+	font-size: 18px;
+	line-height: 50px;
+	height: 50px;
+	padding-left: 38px;
+	color: #ffffff;
+	background-color: #FE4800;
+	position:relative;
+	z-index:100;
+}
+.productLeftMenu .productList{
+    position:relative;
+    z-index:1000;
+}
+.productLeftMenu .productList li {
+	display: block;
+	z-index:1000;
+}
+.productLeftMenu .productList li a:hover{
+    text-shadow:1px 1px 1px #ccc;
+}
+.productLeftMenu .productList li a {
+	display: block;
+    background-color: #fffbe5;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #ede3b2;
+	line-height: 33px;
+	height: 33px;
+	text-decoration: none;
+	color: #666666;
+    background-image: url(../img/search_guide/icon-arrow.gif);
+    background-position: 212px 12px;
+	background-repeat: no-repeat;
+    margin-top:1px;
+    tranition:all 1s;
+    -moz-transition:all 1s;
+    -webkit-transition:all 1s;
+    -0-transition:all 1s;
+	z-index:1000;
+}
+.productLeftMenu .productList li .current,
+.productLeftMenu .productList .active a{
+    background-color:#FEA887;
+    color:#fff;
+    background-position: 212px -19px;
+    margin-top:0;
+	z-index:1000;
+}
+.productLeftMenu .productList li a span {
+	width: 55px;
+	display: block;
+	float: left;
+	text-align: right;
+	margin-right: 10px;
+}
+.productRightMain {
+	float: left;
+}
+/*taobao product right Product*/
+.category-filter{
+	padding:14px 20px;
+    background-color:#fff;
+}
+.category-filter h1{
+    font-size:14px;
+    color:#000;
+    margin:0 0 15px 0;
+    padding:0;
+    font-weight:normal;
+}
+.filter-title{
+    padding-right: 8px;
+}
+.category-filter table, .category-filter table td{
+    font-size:12px;
+    border:0;
+}
+.category-filter table td a{
+    display:block;
+    padding:0 8px;
+    line-height:22px;
+    text-decoration:none;
+    color:#fe4800;
+    border:1px solid #ffbaa0;
+    background:url(../img/bg-filter.jpg) repeat-x 0 0;
+    *background-position:0 1px;
+}
+.category-filter table td a.current{
+    color:#fff;
+    border:1px solid #ef0000;
+    border-top:1px solid #bf0000;
+    background:url(../img/bg-filter.jpg) repeat-x 0 bottom;
+    *background-position:0 -21px;
+}
+.category .mainTaobao {
+	position: relative;
+	background-image: url(../img/taobao_menuLine.png);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+.swith-tab .mainTaobao ul li a {
+	padding: 0px 34px;
+	font-size: 16px;
+	line-height: 48px;
+	font-weight: bold;
+}
+.swith-tab .mainTaobao ul li.current {
+	background-image: url(../img/taobao_menuArrow.png);
+	background-position: center 38px;
+}
+.productRightMain .category {
+	border:0px;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 720px;
+	padding: 0px 0px;
+	_display: inline;
+	height: auto;
+	background-color:transparent;
+}
+.mainTaobao ul .current a {
+	color: #fe5823;
+}
+.productRightMain .productTaobao {
+    margin-top: 0;
+}
+.productTaobao ul li {
+	width: 230px;
+	margin-right: 15px;
+	float: left;
+	height: auto;
+	border:0px;
+	box-shadow: 3px 3px 4px #ccc;
+	margin-top: 20px;
+	display: block;
+    _margin-right: 13px;
+}
+.productTaobao ul li .gallery {
+	width: 230px;
+	position: relative;
+	z-index: 10;
+}
+.productTaobao ul li .gallery a img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border: 0px;
+}
+.productTaobao ul li .jifenRewards {
+	position: relative;
+	font-size: 12px;
+	height:25px;
+	line-height:25px;
+	background:#fff url(../img/images/jifenbao_icon.png) no-repeat 10px center;
+	padding-left:38px;
+	padding-bottom:4px;
+}
+.productTaobao ul .productHover .jifenRewards {
+	background-image:url(../img/images/jifenbao_hover.png);
+	
+}
+.productTaobao ul li .detail {
+	border-bottom: 1px solid #ccc;
+	font-size: 12px;
+	line-height: 18px;
+	padding-top: 7px;
+	color: #000;
+	background-color: #fff;
+	padding: 3px 10px;
+}
+.productTaobao ul li .detail a:hover {
+	text-shadow: 1px 1px #ccc;
+}
+.productTaobao ul li .priceMain {
+	position: relative;
+	height: 32px;
+	background-color:#fff;
+}
+.priceMain .priceNow {
+	color: #fe4800;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 30px;
+	position: relative;
+	float:left;
+	padding-left:6px;
+}
+.priceMain .priceold {
+	position: relative;
+	float:left;
+	font-size: 12px;
+	text-decoration: line-through;
+	line-height:30px;
+	padding-top:2px;
+	padding-left:4px;
+}
+.horizontal ul li .kownDetail{
+	display:none;
+	height: 30px;
+	width: 82px;
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	z-index: 200
+	display: block;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background:url(../img/images/taobao_tolook.png) no-repeat 0px 0px;
+}
+.horizontal ul .productHover .kownDetail {
+	display:block;
+}
+
+.productTaobao ul {
+	width: 735px;
+	overflow: hidden;
+}
+.productTaobao ul .productHover {
+	box-shadow: 0px 0px 1px #999;
+}
+.userName {
+	color: #fe4800 !important;
+	background-image: url(../img/login_taobao/normal_gust.png);
+	background-position: right center;
+	padding-right: 17px;
+	background-repeat: no-repeat;
+}
+.TaobaoLoginButton .qqlogin {
+	background-image: url(../img/login_taobao/logins_qq.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 22px;
+	width: 67px;
+	position: absolute;
+	display: block;
+	left: 6px;
+    top: 50px;
+}
+.TaobaoLoginButton .weibologin {
+	background-image: url(../img/login_taobao/logins_weibo.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 22px;
+	width: 76px;
+	position: absolute;
+	display: block;
+	left: 78px;
+    top: 50px;
+}
+.TaobaoLoginButton .taobaologin {
+	background-image: url(../img/login_taobao/logins_taobao.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 22px;
+	width: 74px;
+	position: absolute;
+	display: block;
+	left: 159px;
+    top: 50px;
+}
+.indexProduct .productHover {
+	background-color: #fff2ed;
+	border: 1px solid #ffae8e;
+}
+.login-taobao .loginedMsg {
+	padding-top: 6px;
+	padding-bottom: 1px;
+	padding-left: 32px;
+	padding-right: 20px;
+	background-color: #fff8ed;
+}
+.login-taobao .loginedMsg .userInfo {
+	padding-top: 13px;
+	margin-bottom: 10px;
+	text-decoration: none;
+	color: #fe4800;
+	position: relative;
+}
+.loginedMsg .userInfo a.normlGuest, .loginedMsg .userInfo a.diamondGuest, .loginedMsg .userInfo a.mail {
+	color: #fe4800;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: bold;
+}
+.loginedMsg .userInfo a.normlGuest, .loginedMsg .userInfo a.diamondGuest {
+	float: left;
+}
+.loginedMsg .userInfo a.mail {
+	float: left;
+	margin-left: 10px;
+	background-position: 2px 6px;
+}
+.loginedMsg .infoRewards {
+	background-image: url(../img/login_taobao/rewards_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	font-size: 18px;
+	line-height: 46px;
+	padding-left: 33px;
+}
+.loginedMsg .userInfo a.quit {
+	float: right;
+	text-decoration: none;
+	font-size: 14px;
+	float: right;
+	line-height: 100%;
+}
+.loginedMsg .infoGrads {
+	background-image: url(../img/new_index/icon-myreward.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+	font-size: 18px;
+	line-height: 48px;
+	padding-left: 33px;
+}
+.loginedMsg span {
+	color: #FE4800;
+	font-size: 16px;
+	font-weight: bold;
+	margin-left: 5px;
+	margin-right: 3px;
+}
+.loginedMsg em {
+	color: #FE4800;
+	font-size: 14px;
+}
+.firstBlock {
+	background-image: url(../img/index.png);
+	background-repeat: no-repeat;
+	background-position: 5px 28px;
+	height: 696px;
+	width: 1100px;
+	position: absolute;
+	z-index: 1000;
+	left: -2px;
+	top: 1px;
+}
+.blockWrapper {
+	position: relative;
+	margin-left: auto;
+	width: 980px;
+	margin-right: auto;
+}
+
+.writtingTaobaoCount {
+	border: 1px solid #fedebf;
+	background-color: #fef0cd;
+	font-size: 14px;
+	line-height: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	position: relative;
+	display: block;
+	color: #427fed;
+	font-weight: bold;
+	height: 35px;
+}
+.writtingTaobaoCount a {
+	color: #fe4800;
+	text-decoration: underline;
+	padding-left: 10px;
+	padding-right: 14px;
+	font-weight: bold;
+	font-size:16px;
+}
+.writtingTaobaoCount .close {
+	padding: 0px;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	height: 14px;
+	width: 14px;
+	background-position: 0px -200px;
+	display: block;
+}
+.writtingTaobaoCount .msgContent {
+	padding-left: 47px;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 20px 9px;
+}
+.main {
+	border: 1px solid #e4e4e4;
+	border-radius: 3px;
+	overflow: hidden;
+	margin-top: 17px;
+	padding-bottom: 25px;
+	background: #ffffff url(../img/bg-sub-main.gif) repeat-y 0 0;
+	_zoom: 1;
+	min-height:700px;
+}
+.main .mainLeft {
+	float: left;
+	width: 227px;
+}
+.mainLeft .title {
+	line-height: 62px;
+	height: 62px;
+	padding-left: 24px;
+	font-size: 22px;
+	color: #fe4800;
+	font-weight: bold;
+	font-family: "宋体", Arial;
+	border-bottom: 1px solid #ffcf90;
+	text-shadow: 1px 1px 1px #fff;
+}
+.mainLeft ul {
+	padding-left: 24px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #fff;
+	padding-right: 24px;
+}
+.mainLeft ul li {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #ffcf90;
+	font-size: 14px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.mainLeft ul li a {
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: none;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	display: block;
+	padding-left: 26px;
+}
+.mainLeft ul li a:hover {
+	color: #fe4800;
+}
+.mainLeft .sumaiOrders a {
+	background-position: 0px -59px;
+}
+.mainLeft .sumaiOrders a:hover, .mainLeft .sumaiOrders .current {
+	background-position: 0px -32px;
+}
+.mainLeft .sumaiInvite a {
+	background-position: 0px -174px;
+}
+.mainLeft .sumaiInvite a:hover, .mainLeft .sumaiInvite .current {
+	background-position: 0px -148px;
+}
+.mainLeft .mytaobaoCollection a {
+	background-position: 0px -116px;
+}
+.mainLeft .mytaobaoCollection a:hover, .mainLeft .mytaobaoCollection .current {
+	background-position: 0px -90px;
+}
+.myMessage {
+	position: relative;
+}
+.mainLeft .myMessage a {
+	background-position: 0px -731px;
+}
+.mainLeft .myMessage a:hover, .mainLeft .myMessage .current {
+	background-position: 0px -672px;
+}
+.myMessage .notice-tab {
+	position: absolute;
+	right: 73px;
+	top: 17px;
+}
+.main .mainRight {
+	float: left;
+	margin-left: 28px;
+	width: 700px;
+}
+.mainRight .inviteToturial {
+	background-image: url(../img/invite/invite_tutorial.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 93px;
+	width: 700px;
+	margin-top: 20px;
+}
+.mainRight .inviteTip {
+	margin-top: 13px;
+	border: 1px solid #FEE3C8;
+	background-color: #FEF7E5;
+	font-size: 12px;
+	padding-left: 20px;
+	line-height: 49px;
+	height: 49px;
+	_padding-top: 12px;
+	_height: 37px;
+}
+a.upgradeMembership {
+	font-size: 12px;
+	color: #519be3;
+}
+.upgradeMembership i {
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 0px -477px;
+	padding-top: 9px;
+	padding-right: 9px;
+	padding-bottom: 9px;
+	padding-left: 9px;
+	display: inline-block;
+	line-height: 0px;
+	font-size: 1px;
+}
+.mainRight .inviteLine {
+	margin-top: 25px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #dddddd;
+}
+.mainRight .inviteLinkTitle {
+	line-height: 40px;
+	color: #fe4800;
+	font-size: 18px;
+	font-family: "微软雅黑";
+}
+.mainRight .inviteMethod01 {
+	border: 1px solid #dfdfdf;
+	height: 182px;
+	background-color: #f6f6f6;
+}
+.mainRight .methodText {
+    height: 95px;
+    width: 490px;
+    padding:5px;
+	margin-left: 20px;
+	margin-top: 14px;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0px 0px 1px #999;
+	float: left;
+	display: block;
+	border-radius: 3px;
+}
+.mainRight .methodTitle {
+	margin-top: 13px;
+	font-size: 18px;
+	line-height: 32px;
+	padding-left: 84px;
+	position: relative;
+	color: #777777;
+}
+.methodTitle .methodIcon {
+	background-image: url(../img/invite/method_1.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 30px;
+	width: 83px;
+	position: absolute;
+	z-index: 100;
+	left: -7px;
+	_left: -91px;
+	top: 2px;
+	_top: 0px;
+}
+.inviteMethod02 .methodTitle .methodIcon {
+	background-image: url(../img/invite/method_2.jpg);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+.mainRight .shareTo {
+	width: 150px;
+	float: left;
+	margin-left: 20px;
+	_display: inline;
+	_width: 150px;
+	_margin-left: 5px;
+}
+.shareTo .title {
+	font-size: 14px;
+	line-height: 22px;
+	color: #666666;
+	margin-top: 8px;
+}
+.shareTo a {
+	float: left;
+	height: 38px;
+	width: 38px;
+	background-image: url(../img/invite/sprits.png);
+	margin-right: 11px;
+	margin-top: 6px;
+	_display: inline;
+}
+.shareTo .shareIconSina {
+	background-position: 0px -220px;
+	display: block;
+}
+.shareTo .shareIconQQspace {
+	background-position: 0px -265px;
+	display: block;
+}
+.shareTo .shareIconQQweibo {
+	background-position: 0px -307px;
+	display: block;
+}
+.shareTo .shareIconTudou {
+	background-position: 0px -349px;
+	display: block;
+}
+.shareTo .shareIconRenren {
+	background-position: 0px -391px;
+	display: block;
+}
+.mainRight .inviteMethod02 {
+	border: 1px solid #dfdfdf;
+	height: 135px;
+	margin-top: 20px;
+	background-color: #f6f6f6;
+}
+.mainRight .mehodInput {
+	height: 32px;
+	width: 500px;
+	margin-left: 20px;
+	margin-top: 14px;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0px 0px 1px #999;
+	float: left;
+	display: block;
+	border-radius: 3px;
+}
+.mainRight .copyTheLink {
+	float: left;
+	height: 35px;
+	width: 113px;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 0px -430px;
+	display: block;
+	margin-top: 12px;
+	margin-left: 25px;
+}
+.inviteMethod02 .copyLinkNote {
+	font-size: 14px;
+	line-height: 24px;
+	padding-left: 30px;
+	color: #888888;
+}
+.inviteMethod02 .methodTitle i {
+	padding-right: 12px;
+	padding-left: 6px;
+	color: #fe520e;
+}
+.mainRight .inviteStatus {
+	margin-top: 20px;
+}
+.inviteStatus .inviteStatusMain {
+	background-color: #f6f6f6;
+	border: 1px solid #dfdfdf;
+	height: 120px;
+	background-image: url(../img/invite/crossLine.jpg);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.inviteStatusMain .inviteStatusLeft {
+	width: 50%;
+	float: left;
+	line-height: 50px;
+	font-size: 18px;
+	height: 50px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.inviteStatusMain .inviteStatusLeft div {
+	padding-left: 105px;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 30px -513px;
+	vertical-align: middle;
+}
+.inviteStatusLeft div span.number {
+    color: #fe4800;
+    font-size: 20px;
+    font-weight:bold;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: baseline;
+}
+.inviteStatusMain .inviteStatusRight {
+	width: 50%;
+	float: left;
+	line-height: 50px;
+	font-size: 18px;
+	height: 50px;
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+.inviteStatusMain .inviteStatusRight div {
+	padding-left: 105px;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 30px -580px;
+	vertical-align: middle;
+}
+.inviteStatusRight div span.number {
+    color: #fe4800;
+    font-size: 20px;
+    font-weight:bold;
+    padding-right: 5px;
+    padding-left: 5px;
+    vertical-align: baseline;
+}
+.mainRight .notice .title {
+	font-size: 16px;
+	line-height: 24px;
+	color: #fe4800;
+	background-image: url(../img/invite/sprits.png);
+	background-repeat: no-repeat;
+	background-position: 0px 3px;
+	padding-left: 20px;
+	margin-top: 18px;
+	margin-left: 18px;
+}
+.mainRight .notice ul li {
+	font-size: 12px;
+	line-height: 16px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.mainRight .notice ul {
+	margin-top: 7px;
+	margin-left: 20px;
+	padding-bottom: 14px;
+	color: #000;
+}
+/*my sumai page by yves*/
+
+.mineInfoMain, .mineInterestMain, .mineRewardMain, .mineOrderMain {
+	background-color: #F6F6F6;
+	border: 1px solid #DFDFDF;
+	padding: 15px;
+ *padding:7px;
+}
+.mineOrderMain {
+	background-color: #fff;
+}
+.mineInfoMain table {
+	width: 100%;
+	border: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+.mineInfoMain table td {
+	padding: 10px;
+}
+.mineInfoMember {
+	margin: 0 20px;
+}
+.mineInfoUpgrade {
+	font-size: 12px;
+}
+.mineInfoTitle, .mineInterestTitle, .mineRewardTitle, .mineOrderTitle, .myMsgTitle {
+	color: #FE4800;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	line-height: 40px;
+}
+.mineInfoTip {
+	position: relative;
+	background-color: #FEF7E5;
+	border: 1px solid #FEE3C8;
+	font-size: 12px;
+	padding: 13px;
+	margin-top: 13px;
+	padding-left: 40px;
+	background-image: url("../img/invite/sprits.png");
+	background-position: 20px 16px;
+	background-repeat: no-repeat;
+}
+.mineInfoTip .pointer {
+	position: absolute;
+	top: -9px;
+	left: 100px;
+	width: 17px;
+	height: 10px;
+	background: url(../img/reward/noticeTab-pointer.gif) no-repeat 0 0;
+}
+.big-text {
+	font-size: 16px;
+	font-weight: bold;
+}
+.red-text {
+	color: #FE4800
+}
+.mineInterestMain, .mineRewardMain {
+	padding: 0;
+	font-size: 14px;
+	background-image: url(../img/reward/money-bag.gif);
+	background-position: 60px 40px;
+	background-repeat: no-repeat;
+	padding-left: 20%;
+}
+.mineRewardMain {
+	background-image: url(../img/reward/price-tab.gif);
+}
+.mineInterestMain .mineInterestLeft, .mineInterestMain .mineInterestRight {
+    float: left;
+    width: 80%;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    height: 75px;
+}
+.mineRewardMain .mineRewardLeft, .mineRewardMain .mineRewardRight, .mineRewardMain .mineRewardMiddle {
+    position:relative;
+    float: left;
+    width: 33%;
+    padding-left:40px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: 75px;
+}
+.mineRewardMain .mineRewardLeft {
+}
+.mineRewardMain .mineRewardLeft, .mineRewardMain .mineRewardMiddle {
+	background: url("../img/invite/crossLine.jpg") no-repeat right center;
+}
+.mineInterestMain .redTitle, .mineRewardMain .redTitle {
+	color: #fe4800;
+	font-size: 24px;
+	font-weight:bold;
+}
+.mineRewardMain .title span {
+	font-size: 12px;
+}
+.mineInterestMain .redTitle span, .mineRewardMain .redTitle span {
+	color: #454545;
+	font-size: 14px;
+}
+.mineInterestMain .number, .mineRewardMain .number {
+	color: #fe4800;
+	font-size: 18px;
+	font-weight: bold;
+}
+.mineInterestMain .number span, .mineRewardMain .number span {
+	font-size: 14px;
+	font-weight: normal;
+}
+.mineOrder {
+	position: relative;
+}
+.mineOrderItem table {
+	width: 670px;
+	margin: 0 0 1em 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: 12px;
+	border: 1px solid #e0e0e0;
+}
+.mineOrderItem tr {
+	border: 1px solid #e0e0e0;
+	vertical-align: middle;
+}
+.mineOrderItem td {
+	padding: 6px;
+}
+.mineOrderItemDetail {
+	width: 35%;
+}
+.mineOrderItemDetail .title, .mineOrderItemDetail .price span {
+	color: #FE4800;
+}
+.mineOrderItemDetail .price {
+	margin-top: 10px;
+}
+.mineOrderItemDetail .price span {
+	color: #FE4800;
+	font-size: 16px;
+}
+.mineOrderItem p {
+	margin: 3px 0;
+}
+.mineOrderTitle {
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    position: relative;
+    bottom: -1px;
+    padding: 0 15px;
+    border-left: 1px solid #e0e0e0;
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+.mineOrderMain {
+	clear: both;
+	line-height: 130%;
+	margin-top: 0;
+	padding: 15px;
+}
+.mineOrderItemHeader {
+	background-color: #e0e0e0;
+}
+.mineOrderItemHeader span {
+	margin-right: 20px;
+}
+.reward-detail .jifenbao {
+	font-size: 16px;
+}
+.mineInfo, .mineInterest, .mineReward, .mineOrder, .mineOrderFooter, .myMsg {
+	margin-top: 20px;
+}
+.mineRewardRight .whats-subi{
+    position:absolute;
+    top:-6px;
+    left:6px;
+}
+.whats-subi{
+    display:block;
+    width:95px;
+    height:25px;
+    background:url(../img/reward/subi.gif) no-repeat 0 0;
+}
+.mineOrderPager{
+    text-align:right;
+}
+.pagination li{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    margin:0 3px;
+    line-height:15px;
+}
+.pagination li a{
+    display:block;
+    padding:2px 5px;
+    min-width:10px;
+    line-height:15px;
+    text-decoration:none;
+    border:1px solid #ccc;
+    font-size:12px;
+    text-align:center;
+}
+.pagination li a.current{
+    border:1px solid #FE4800;
+    background-color:#FE4800;
+    color:#fff;
+}
+.pagination-jump input.text-field{
+    width:30px;
+}
+.pagination li a.pagination-prev{
+    padding-left:15px;
+    background:url(../img/reward/flash-left-right.gif) no-repeat 6px 5px;
+}
+.pagination li a.pagination-next{
+    padding-right:15px;
+    background:url(../img/reward/flash-left-right.gif) no-repeat 44px -36px;
+}
+/* my message*/
+
+.myMsg table{
+    width:100%;
+}
+.myMsg table .myMsgDay{
+    width:250px;
+}
+.myMsg table, .myMsg td{
+    border:0;
+}
+.myMsg table td, .myMsg table td{
+    padding:15px 5px;
+    text-align:left;
+    vertical-align:top;
+    border-bottom:1px dotted #CCC;
+}
+.myMsg table .myMsgHeader td{
+    padding:5px;
+    border:1px solid #d5d5d5;
+}
+.myMsg table td{
+    padding:15px 5px;
+}
+.myMsgHeader{
+    background:url(../img/message/bg-table-header.jpg) repeat-x 0 0;
+    border:1px solid #d5d5d5;
+}
+.myMsgHeader td{
+    border:1px solid #d5d5d5;
+}
+.myMsgIcon{
+    width:25px;
+    background:url(../img/message/open-letter.gif) no-repeat center 17px;
+}
+.myMsgHeader .myMsgIcon{
+    background-image:none;
+}
+.newMsg .myMsgIcon{
+    background:url(../img/message/close-letter.gif) no-repeat center 17px;
+}
+.myMsgMTitle{
+    font-size:14px;
+    line-height:100%;
+    font-weight:bold;
+    margin:0;
+    width:504px;
+}
+.myMsgMTitle a{
+    text-decoration:none;
+}
+.myMsgDetail{
+    margin-top:15px;
+}
+td.myMsgDay{
+    padding-top:15px;
+    width:100px;
+}
+/* vip page */
+.vip .main {
+	background-image: none;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-left: 20px;
+	line-height: 120%;
+}
+.vip .main h2 {
+	font-size: 18px;
+	line-height: 18px;
+	color: #fe4800;
+	vertical-align: middle;
+}
+.vip .main h2 img {
+	vertical-align: middle;
+}
+.vip-des {
+	margin: 1em 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+ *border:1px solid #e0e0e0;
+}
+.vip-des tr {
+	border: 1px solid #e0e0e0;
+	vertical-align: middle;
+}
+.vip-des td, .vip-des th {
+	padding: 15px;
+ *border-bottom:1px solid #e0e0e0;
+}
+.vip-des th, .vip-des .table-header, .vip-des .table-footer {
+	background-color: #efefef;
+}
+.vip-des .table-footer td {
+ *height:10px;
+}
+.vip-des .line-title {
+	font-weight: bold;
+}
+.vip-des .table-footer td {
+	padding: 5px;
+}
+.vip-des .line-title {
+	text-align: center;
+	width: 30%;
+}
+.vip .red-text {
+	color: #fe4800;
+}
+.upgrade {
+	display: none;
+	width: 540px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.upgradeTitle {
+	padding: 20px;
+	text-align: center;
+	background: url(../img/vip/thick-line-dotted.gif) repeat-x 0 bottom;
+}
+.upgradeStatus {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	padding: 5px 0 5px 18px;
+	background: url(../img/vip/exclamation.gif) no-repeat 0 6px;
+}
+.upgradeDetail {
+	text-align: center;
+}
+.upgradeDetailTab {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 120px;
+	margin: 0 20px;
+	text-align: center;
+	vertical-align: middle;
+}
+.upgradeNumber {
+	padding: 5px 10px;
+	background-color: #EEEEEE;
+}
+.upgradeGoalTitle {
+	font-size: 16px;
+}
+.upgradeGoal {
+	font-size: 16px;
+}
+.upgradeGoal span{
+	font-size: 12px;
+	color:#fe4800;
+}
+.upgradeNumber .rightMsg{
+	margin-top:4px;	
+}
+.upgradeNumber .rightMsg span{
+	font-size:12px;	
+	color:#fe4800;
+}
+.upgradeCurrent {
+	font-weight: bold;
+	color: #FF4B00;
+}
+.upgradeLink {
+	display: block;
+	background-color: #3577EF;
+	color: #FFF;
+	padding: 5px;
+}
+.upgradeNotice {
+	background-color: #FEF7E5;
+	border: 1px solid #FEE3C8;
+	margin-top: 13px;
+	padding: 10px;
+}
+.upgradeNotice a {
+	color: #3577ef;
+	text-decoration: none;
+}
+/* help center */
+
+.faq-list dt {
+	position: relative;
+	height: 35px;
+	margin-bottom: 5px;
+	padding: 0 20px;
+	background: url("../img/faq/bg-faq-title.jpg") no-repeat 0 bottom transparent;
+	cursor: pointer;
+	font-weight: bold;
+	line-height: 35px;
+}
+.faq-list .showed {
+	background-position: 0 0;
+}
+.faq-list dd {
+	display: none;
+	margin: 5px 20px 20px 20px;
+	line-height: 120%;
+}
+.helpCenter123, .linkTutorialJu {
+	margin: 25px 0 0 0;
+}
+.mainColumnLeft {
+	float: left;
+	margin: 25px 0 0 0;
+}
+.mainColumnRight {
+	float: right;
+	margin: 25px 0 0 0;
+}
+.helpCenterFaq {
+	margin-bottom: 25px;
+}
+.mainColumnRight, .linkTutorialTao, .linkTutorialJu {
+	border: 1px solid #FFCA96;
+}
+.linkFaq {
+	border-bottom: 1px solid #FFCA96;
+}
+.helpCenterScroll {
+	padding: 20px;
+}
+.helpCenterScroll div {
+	width: 294px;
+	height: 103px;
+	overflow-y: scroll;
+	line-height: 150%;
+}
+.helpCenterScroll div li {
+	padding: 5px 0 5px 20px;
+	background: url("../img/help-center/icon.gif") no-repeat 0 -179px;
+}
+.helpCenterScroll div a {
+	text-decoration: none;
+}
+.help-center .mainLeft ul {
+	border-bottom: 1px solid #FFCF90;
+}
+.help-center .mainLeft ul li.helpCenterFaq {
+	border: 0;
+	margin-bottom: 0;
+}
+.mainLeft ul li.helpCenterTaoMao a, .mainLeft ul li.helpCenterJuhuasuan a, .mainLeft ul li.helpCenterFaq a {
+	background-image: url("../img/help-center/icon.gif");
+}
+.mainLeft ul li.helpCenterTaoMao a, .mainLeft ul li.helpCenterJuhuasuan a {
+	background-position: 0 4px;
+}
+.mainLeft ul li.helpCenterFaq a {
+	background-position: 0 -91px;
+}
+.mainLeft ul li.helpCenterTaoMao a:hover, .mainLeft ul li.helpCenterJuhuasuan a:hover {
+	background-position: 0 -45px;
+}
+.mainLeft ul li.helpCenterFaq a:hover {
+	background-position: 0 -140px;
+}
+.mainLeft ul.other-link {
+	padding-top: 10px;
+	border-bottom: 0;
+}
+.mainLeft .other-link li {
+	padding: 10px 0;
+	border: 0;
+}
+.mainLeft .other-link li a {
+	background-image: none;
+	padding: 0;
+}
+.help-sub-nav {
+	margin: 25px 0;
+}
+.help-sub-nav li {
+	display: block;
+	float: left;
+	margin-right: 21px;
+}
+.help-sub-nav li:last-child {
+	margin-left: 0;
+}
+.help-sub-nav li a {
+	display: block;
+	position: relative;
+	border: 2px solid #FEF0CD;
+}
+.help-sub-nav li a.current {
+	border-color: #FCCD99;
+}
+.help-sub-nav li a.current .pointer {
+	display: block;
+	position: absolute;
+	left: 100px;
+	bottom: -11px;
+	_bottom: -17px;
+	width: 17px;
+	height: 12px;
+	background: url(../img/help-center/pointer.gif) no-repeat 0 0;
+}
+li.no-margin {
+	margin: 0;
+}
+/* popup */
+
+.align-left {
+	text-align: left;
+}
+.align-center {
+	text-align: center;
+}
+.little-text {
+	font-size: 12px;
+}
+.yellow-text {
+	color: #feb300;
+}
+.italic-text {
+	font-style: italic;
+}
+.popup {
+	background-color: #fff8ed;
+}
+.popupBody {
+	padding: 20px 30px;
+}
+.popupHeader {
+	padding: 10px 20px;
+	background: #FFF9ED url(../img/bg-popup-title.jpg) repeat-x 0 bottom;
+	color: #666666;
+}
+.popupHeader h3 {
+	font-size: 20px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+.popupNoWithdraw {
+	text-align: center;
+}
+.popupNoWithdraw h4, .popupWeWillReward h4{
+    font-size: 16px;
+    color: #000;
+}
+.continueShopping {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 190px;
+	height: 50px;
+	background: url(../img/reward/continue-shopping.gif) no-repeat 0 0;
+	vertical-align: middle;
+}
+a.tutorialTao {
+	color: #fe520e;
+	text-decoration: none;
+	margin-left: 30px;
+	padding-left: 20px;
+	background: url(../img/help-center/icon.gif) no-repeat 0 -138px;
+}
+.popupCompleteInfo label {
+	width: 100px;
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	vertical-align: middle;
+}
+.popupCompleteInfo textfield {
+	width: 180px;
+}
+.completInfoSend {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 75px;
+	height: 34px;
+	background: transparent url(../img/reward/submit.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+	margin-left: 105px;
+}
+.completInfoRedo {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 75px;
+	height: 34px;
+	background: transparent url(../img/reward/reset.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+}
+.popupWithdraw {
+	text-align: center;
+}
+.popupWithdraw .numberInput {
+	width: 70px;
+}
+.withdrawNow {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 95px;
+	height: 34px;
+	background: transparent url(../img/reward/withdraw.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+}
+.popupWeWillReward{
+    text-align:center;
+}
+.iKnow{
+    display: inline-block;
+    *display:inline;
+    *zoom:1;
+    width: 92px;
+    height: 39px;
+    background: transparent url(../img/reward/i-know.gif) no-repeat 0 0;
+}
+.popupLoginMine h4{
+	font-size: 24px;
+	margin: 15px;
+}
+.popupLoginMine .big-text {
+	font-size: 35px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.loginWithQQ, .loginWithWeibo, .loginWithTao {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 100px;
+	height: 30px;
+	background: transparent url(../img/login_taobao/login.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+	margin: 0 3px;
+}
+.loginWithWeibo {
+	background-position: 0 -30px;
+}
+.loginWithTao {
+	background-position: 0 -60px;
+}
+.popupPaperTab {
+	width: 275px;
+	height: 160px;
+	padding: 15px;
+	font-size: 12px;
+	background: url(../img/login_taobao/bg-paper-tab.gif) no-repeat center 0;
+	line-height: 120%;
+}
+.popupPaperTab h4 {
+	font-size: 18px;
+}
+.loginWithQQNarrow, .loginWithWeiboNarrow, .loginWithTaoNarrow {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 75px;
+	height: 35px;
+	background: transparent url(../img/login_taobao/login-narrow.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+	margin: 0 3px;
+}
+.loginWithWeiboNarrow {
+	width: 86px;
+	background-position: 0 -35px;
+}
+.loginWithTaoNarrow {
+	width: 83px;
+	background-position: 0 -70px;
+}
+.noFanli {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+    width: 146px;
+    height: 30px;
+	background: transparent url(../img/login_taobao/no-fanli.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+}
+.popupLoginAd {
+	border-bottom: 1px solid #ffc3a5;
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.popupLoginMine .popupPaperTab {
+	display: block;
+}
+.popupLoginAd .popupLoginAdProduct, .popupLoginAd .popupLoginAdMerchant {
+	width: 100%;
+}
+.popupLoginAd .popupLoginAdProduct td, .popupLoginAd .popupLoginAdMerchant td {
+	vertical-align: top;
+	line-height: 140%;
+}
+.popupLoginAd .popupLoginAdProduct .title {
+	height: 40px;
+}
+.popupLoginAd .popupLoginAdMerchant .title {
+	height: 25px;
+}
+.popupLoginAd .popupLoginAdProduct .title, .popupLoginAd .popupLoginAdProduct .price, .popupLoginAd .popupLoginAdMerchant .title, .popupLoginAd .popupLoginAdMerchant .price {
+	font-weight: bold;
+	text-align: left;
+}
+.popupLoginAd .popupLoginAdMerchant .title, .popupLoginAd .popupLoginAdMerchant .price {
+	font-weight: normal;
+}
+.popupLoginAd .popupLoginAdProduct .price, .popupLoginAd .popupLoginAdMerchant .price {
+	float: left;
+}
+.popupLoginAd .popupLoginAdProduct .jifenbao, .popupLoginAd .popupLoginAdMerchant .jifenbao {
+	float: right;
+}
+.popupLoginAd .popupLoginAdProduct .pic, .popupLoginAd .popupLoginAdMerchant .pic {
+	padding-right: 15px;
+	text-align: left;
+	width: 60px;
+}
+.popupLoginAd .popupLoginAdProduct .tutorialTao, .popupLoginAd .popupLoginAdMerchant .tutorialTao {
+	float: right;
+	font-weight: bold;
+    line-height:20px;
+}
+.popupInvite h4 {
+	border-bottom: 1px solid #ffc3a5;
+	padding-bottom: 15px;
+	margin-bottom: 0;
+}
+.popupInvite h3 {
+	font-size: 16px;
+	color: #000;
+	border-top: 1px solid #fff;
+	padding-top: 15px;
+	margin-top: 0;
+}
+.popupInvite .methodText {
+    height: 95px;
+    width: 490px;
+    padding:5px;
+	border: 1px solid #cccccc;
+	box-shadow: inset 0px 0px 1px #999;
+	float: left;
+	display: block;
+	border-radius: 3px;
+}
+.popupInvite .shareTo {
+	width: 150px;
+	float: left;
+	margin-left: 20px;
+	_display: inline;
+	_width: 150px;
+	_margin-left: 5px;
+}
+.popupInvite .shareTo .title {
+	margin-top: 0;
+}
+.noInvite {
+	display: inline-block;
+ *display:inline;
+ *zoom:1;
+	width: 239px;
+	height: 50px;
+	background: transparent url(../img/login_taobao/no-invite.gif) no-repeat 0 0;
+	vertical-align: middle;
+	border: 0;
+}
+.darkBlock {
+	_zoom: 1;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	z-index: 999;
+	/*	background-color: rgba(0,0,0,0.6);
+	background-color:#000000\0;
+	filter: Alpha(Opacity=60)\0;
+	*background-color:#000000;
+	*filter: Alpha(Opacity=60);*/
+	background-image: url(../js/fancytip/fancybox_overlay.png);
+	background-repeat: repeat;
+ 
+}
+#popupFirstSending5 {
+	width: 470px;
+}
+#productUnlogined {
+	width: 700px;
+}
+#companyUnLogined {
+	width: 700px;
+}
+#backrewardNotice {
+	width: 656px;
+}
+#writeZhifubaoMessage {
+	width: 450px;
+}
+#changeSubi {
+	width: 450px;
+}
+#first-send-5 {
+	width: 750px;
+}
+.popupTaobaoOnly
+{
+    width:700px;
+}
+.popupTaobaoOnly .popupHeader {
+    background-image:none;
+    padding-top:20px;
+    padding-bottom:5px;
+}
+.popupTaobaoOnly .popupFooter {
+    padding:10px;
+    background-color:#fe4800;
+    color:#fff;
+    text-align:center;
+    font-size:12px;
+}
+.popupTaobaoOnly .popupLoginAd {
+    position:relative;
+    left:-8px;
+    background:url(../img/taobao_only/bg-popup-recommand.gif) no-repeat 0 0;
+    border-bottom:0;
+    padding:25px 30px;
+    padding-bottom:0;
+}
+.popupTaobaoOnly .adMerchant{
+    background:url(../img/taobao_only/bg-popup-admerchant.gif) no-repeat 0 0;
+    height:76px;
+}
+.popupTaobaoOnly .adProduct{
+    background:url(../img/taobao_only/bg-popup-adproduct.gif) no-repeat 0 0;
+    height:105px;
+}
+.popupTaobaoOnly .popupLoginAd .tutorialTao{
+    position:absolute;
+    top:0;
+    right:0;
+    line-height:20px;
+}
+
+.popupTaobaoOnly .popupLoginAd .percent .red-text{
+    font-size:18px;
+    font-weight:bold;
+}
+.taobaoLogin-tao{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:196px;
+    height:40px;
+    background:url(../img/taobao_only/btn-taobao-login-medium.gif) no-repeat 0 0;
+}
+.popupTaobaoOnly .popupLoginAd .popupLoginAdProduct{
+    width:450px;
+}
+.popupTaobaoOnly .popupLoginAd .popupLoginAdMerchant{
+    width:410px;
+}
+.popupTaobaoOnly .popupLoginAd .popupLoginAdProduct .title, .popupTaobaoOnly .popupLoginAd .popupLoginAdProduct .price, .popupTaobaoOnly .popupLoginAd .popupLoginAdMerchant .title, .popupTaobaoOnly .popupLoginAd .popupLoginAdMerchant .price {
+    font-weight: 100;
+}
+.popupTaobaoOnly  .popupLoginAd .popupLoginAdMerchant td {
+    line-height: 100%;
+}
+.popupTaobaoOnly .popupLoginAd .popupLoginAdProduct .jifenbao, .popupTaobaoOnly .popupLoginAd .popupLoginAdMerchant .jifenbao {
+    float: none;
+}
+.popupTaobaoOnly .popupLoginAd .popupLoginAdProduct .price, .popupTaobaoOnly .popupLoginAd .popupLoginAdMerchant .price {
+    float: none;
+}
+a.red-text{
+    text-decoration:none;
+    color:#fe4800;
+}
+a.red-text:hover, a.tutorialTao:hover{
+    text-decoration:underline;
+}
+/* no result 404 page */
+.noResult .main {
+    background-image: none;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    line-height: 120%;
+}
+.sorry, .sorry-no-fanli{
+    height:190px;
+    padding-left:390px;
+    padding-top:50px;
+    background:url(../img/no_result/404.jpg) no-repeat 130px 25px;
+}
+.sorry-no-fanli{
+    background-image:url(../img/no_result/search_no_result.jpg);
+}
+.sorry h1, .sorry-no-fanli h1{
+    color:#fe4800;
+}
+.sorry a, .sorry-no-fanli a{
+    color:#1861ed;
+    text-decoration:none;
+}
+.sorry ul, , .sorry-no-fanli ul{
+                 list-style:disc;
+             }
+
+
+/* recommanded */
+
+.recommanded, .loginPage {
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-left: 20px;
+    line-height: 120%;
+    border: 1px solid #e4e4e4;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-top: 17px;
+    padding-bottom: 25px;
+    background: #ffffff;
+    _zoom: 1;
+}
+
+.recommanded .product{
+    float:left;
+    width:140px;
+    margin:20px 8px 0 7px;
+    overflow:hidden;
+}
+.notFound .recommanded .product{
+    float:left;
+    width:140px;
+    margin:20px 4px 0 4px;
+    overflow:hidden;
+}
+.noResult .notFound{
+	min-height:400px !important;
+}
+.recommanded .product .title{
+    font-size:12px;
+}
+.recommanded .product .price{
+    font-size:18px;
+    color:#fe4800;
+}
+.recommanded .block-header{
+    border-bottom: 1px solid #cccccc;
+}
+.recommanded .block-header h3{
+    color:#fe4800;
+    margin:10px 0;
+}
+.notFound .recommanded .block-header h3{
+	font-size:26px;	
+}
+.recommanded .block-header a{
+    font-size:12px;
+    margin:10px 0;
+    text-decoration:none;
+}
+/*friend invite*/
+.friend-invite-signin{
+    margin-top:10px;
+    position:relative;
+    height:283px;
+    background:url(../img/friend_invite/friend-invite-signin.jpg) no-repeat 0 0;
+}
+.taobao-only .friend-invite-signin{
+    background-image:url(../img/taobao_only/friend-invite-signin-taobao.jpg);
+}
+.confidential{
+    font-size: 12px;
+    width: 154px;
+    line-height:150%;
+}
+.friend-invite-signin .confidential{
+    position: absolute;
+    right: 122px;
+    top: 196px;
+}
+.friend-invite-signin .friend-invite-signin-msg{
+    position:absolute;
+    top: 40px;
+    right: 50px;
+    width:250px;
+    font-size:12px;
+    line-height:120%;
+}
+.friend-invite-signin-qq{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:250px;
+    height:40px;
+    background:url(../img/friend_invite/friend-invite-btn.jpg) no-repeat 0 0;
+}
+.friend-invite-signin .friend-invite-signin-qq{
+    position:absolute;
+    top: 105px;
+    right: 50px;
+}
+
+.friend-invite-signin-taobo-only{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:220px;
+    height:59px;
+    background:url(../img/taobao_only/btn-taobao-login.gif) no-repeat 0 0;
+}
+.friend-invite-signin .friend-invite-signin-taobo-only{
+    position:absolute;
+    right: 63px;
+    top: 98px
+}
+.friend-invite-signin-sina{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:250px;
+    height:40px;
+    background:url(../img/friend_invite/friend-invite-btn.jpg) no-repeat 0 -40px;
+}
+.friend-invite-signin .friend-invite-signin-sina{
+    position:absolute;
+    top: 155px;
+    right: 50px;
+}
+.friend-invite-signin-taobao{
+    display:inline-block;
+    *display:inline;
+    *zoom:1;
+    width:250px;
+    height:40px;
+    background:url(../img/friend_invite/friend-invite-btn.jpg) no-repeat 0 bottom;
+}
+.friend-invite-signin .friend-invite-signin-taobao{
+    position:absolute;
+    top: 205px;
+    right: 50px;
+}
+.friend-invite-signin .five-yuan{
+    position:absolute;
+    top:30px;
+    right:-30px;
+    width:73px;
+    height:77px;
+    background:url(../img/friend_invite/5yuan.png) no-repeat 0 0;
+}
+.friend-invite-comment{
+    margin-top:10px;
+}
+
+
+/* stactic page */
+.stacticContent{
+    line-height:120%;
+}
+.mainRight .stacticContent .notice ul li{
+    text-indent:20px;
+}
+.motivattion{
+    font-size:20px;
+    padding-left:30px;
+    background:url(../img/ok.png) no-repeat 0 0;
+    line-height:23px;
+    margin-top:20px;
+    color:#FE4800;
+}
+
+.motivattion a{
+    font-size:22px;
+    font-style:italic;
+    color:#FE4800;
+}
+.loginPage {
+    text-align:center;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+/*about us*/
+.about-us .stacticContent p{
+    text-indent:30px;
+}
+.about-us-title{
+    padding-left:35px;
+    line-height:25px;
+    background:url(../img/help-center/medium-logo.png) no-repeat 0 0;
+}
+.taobao-only .landing-login{
+    width:960px;
+    height:336px;
+    background:url(../img/taobao_only/langding_page_r2_c1.jpg) no-repeat 0 0;
+}
+.taobao-only .landing-login .friend-invite-signin-taobo-only {
+    position: absolute;
+    right: 126px;
+    top: 226px;
+}
+.taobao-only  .landing-login .confidential {
+    position:absolute;
+    right: 183px;
+    top: 343px;
+}
+
+/*mysumai message*/
+.mineInterest{
+    position:relative;
+}
+.mineInterest .mineMessage{
+    position: absolute;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+    z-index: 10;
+    left: 22px;
+    bottom: 7px;
+}
+.mineInterest .mineMessage2{
+    position: absolute;
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+    z-index: 10;
+    left: 22px;
+    bottom: 31px;
+}
+
+.mineInterest .mineMessage span{
+    color:#fe4800;
+}
+.taobaoColor{
+    color:#fe4800!important;
+}
+.noticePaper h1 {
+    font-size: 12px;
+    line-height: 22px;
+    color: #666666;
+}
+.notice .noticePaper {
+    margin-left: 20px;
+}
+.noticeTable {
+    font-size: 12px;
+    background-color: #ffffff;
+}
+.noticeTable td {
+    line-height: 19px;
+    padding-right: 9px;
+    padding-left: 9px;
+    color: #333333;
+    border:1px solid #ffe3c8;
+}
+.greyColor{
+    color:#666666!important;
+}
+/*product submenu*/
+li .subitem{
+    display: none;
+    z-index: 100;
+    position: absolute;
+    left: 198px;
+    top: 0px;
+    width: 520px;
+    border: 1px solid #DDD;
+    background: #fff;
+    overflow: hidden;
+    -moz-box-shadow: 0 0 10px #DDD;
+    -webkit-box-shadow: 0 0 10px #DDD;
+    box-shadow: 0 0 10px #DDD;
+    min-height: 384px;
+    padding: 0 4px 0 8px;
+    font-size: 12px;
+    z-index: 1000;
+}
+li .subitem dl{
+    border-top: 1px solid #EEE;
+    padding: 6px 0;
+    overflow: hidden;
+    zoom: 1;
+}
+li .subitem .fore1{
+    border:0px;
+}
+li .subitem dt {
+    float: left;
+    width: 54px;
+    line-height: 22px;
+    text-align: right;
+    margin-top: 2px;
+    padding: 3px 0 0;
+}
+.productLeftMenu .productList li .subitem dt a{
+    color:#fe4800;
+}
+li .subitem dd {
+    float: left;
+    width: 415px;
+    padding: 3px 0 0;
+    overflow: hidden;
+    zoom: 1;
+    margin-left: 20px;
+}
+li .subitem em {
+    float: left;
+    height: 14px;
+    margin: 2px 0;
+    line-height: 14px;
+    padding: 0 8px;
+
+}
+li .subitem dd a {
+    white-space: nowrap;
+    color: #666;
+}
+li .subitem dd a:hover{
+    color:#fe4800;
+}
+.productLeftMenu .productList li a:hover{
+    color:#fe4800;
+}
+.productLeftMenu .productList li .subitem  a{
+    font-size:12px;
+    display: block;
+    background-color: #ffffff;
+    border: 0px;
+    line-height: 14px;
+    height: 14px;
+    text-decoration: none;
+    color: #666666;
+    background-image: none;
+    margin-top: 0px;
+}
+.productLeftMenu .productList li .subitem  a:hover{
+    color:#fe4800
+}
+.jifenBanner {
+      padding-top: 10px;
+}
+.faq-list dl .visible {
+    display: block;
+}
+.usercard_layer {
+    display: none;
+}
+
+
+/*welcome bar*/
+.welcomeBar{
+	background-color:rgb(102,102,102);
+	height:30px;
+	display:none;
+}
+.welcomeBar .welcomeMessage{
+	width:980px;
+	margin:0px auto;	
+	font-size:12px;
+	line-height:30px;
+	position:relative;
+	z-index:2;
+	color:#ffffff;
+}
+.welcomeBar .welcomeMessage span{
+	margin-left:253px;
+	display:block;
+	float:left
+}
+.welcomeBar .welcomeMessage .addFavSite{
+	float: left;
+	display: block;
+	background-image: url(../img/welcome/icon_fav.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left:30px;
+	margin-left:5px;
+	color:#ffffff;
+}
+.welcomeBar .welcomeMessage .addToDesk{
+	float: left;
+	display: block;
+	background-image: url(../img/welcome/icon_desk.png);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 30px;
+	margin-left: 5px;
+	color:#ffffff;
+}
+.welcomeBar .welcomeMessage .welcomeClose{
+	position:absolute;
+	top:0px;
+	right:10px;
+	display:block;
+	background:url(../img/welcome/icon_close.png) no-repeat right center;
+	width:30px;
+	height:30px;
+}
+.topHelpCenter{
+	background:url(../img/new_index/icon-ask.png) no-repeat left center;
+	padding-left:20px;
+}
+.weiboAttension {
+	position: absolute;
+	z-index: 10;
+	right: -20px;
+	top: 50px;
+}
+.messagePost{
+	background:url(../img/new_index/post_news.png) no-repeat 0px 0px;
+	width:417px;
+	height:71px;	
+	float:left;
+	margin-left:10px;
+	margin-top: 10px;
+	text-indent:-9999px;
+	overflow:hidden;
+}
+
+/*search bar*/
+.middleSearch{
+	width: 980px;
+	margin: 19px auto 0px auto;
+	height: 57px;
+	overflow: hidden;
+	background-color: transparent;
+	background-image: url(../img/new_index/serach_bar.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+}
+
+.guide02{
+	width:980px;
+	height:47px;
+	margin:0px auto 0px auto;
+	padding-bottom:10px;
+	background-color: transparent;
+	background:url(../img/new_index/sumai_guide.png) no-repeat 0px 0px;
+}
+/*kefu*/
+.floatKefu{
+	POSITION: fixed;
+	TOP: 180px;
+	RIGHT: 1px;
+	_position: absolute;
+	z-index: 10000;	
+}
+.floatKefu a{
+	display: block;
+	width: 31px;
+	height: 124px;
+	background-image: url(../img/new_index/online_service.gif);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	text-indent:-9999px;
+}
+
+/*new fanli*/
+.newQuickLink{
+	width:980px;
+	height:auto;
+	overflow:hidden;
+	_zoom:1;
+	margin:0px auto;	
+}
+.newQuickLink .quicklinkTitle{
+	background:url(../img/new_index/icon-fanli.png) no-repeat 0px 0px;
+	height:26px;
+	line-height:26px;
+	margin-top:8px;
+}
+.newQuickLink .quicklinkTitle span{
+	font-size:16px;
+	color:#ff3300;
+	padding-left:26px;
+	padding-right:8px;
+}
+.newQuickLink .quicklinkMain{
+	border-radius:3px;
+	background-color:#ffffff;
+	overflow:hidden;
+	height:110px;
+	border:1px solid #cccccc;
+}
+.newQuickLink .quicklinkMain .leftQuickLink{
+	width:153px;
+	height:110px;
+	background:url(../img/new_index/ttj.png) no-repeat 22px 8px;
+	float:left;
+}
+.newQuickLink .quicklinkMain  .middleQuickLink{
+	width:595px;
+	background:url(../img/new_index/fanli-line.png) no-repeat 0px 0px;
+	padding-top:8px;
+	padding-bottom:8px;
+	float:left;
+}
+.newQuickLink .quicklinkMain .rightQuickLink{
+	width:230px;
+	height:110px;
+	float:left;
+}
+.middleQuickLink ul li a{
+	display: block;
+	color: #000000;
+	background-image: url(../img/new_index/icon-sprite.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width:120px;
+	padding-left:26px;
+	height:30px;
+	line-height:30px;
+	margin-left:40px;
+	text-decoration:none;
+}
+.middleQuickLink ul li{
+	float:left;	
+}
+.middleQuickLink ul li a:hover{
+	text-decoration:none;
+	color:#ff3300;
+	background-image:url(../img/new_index/icon-sprite_hover.png);
+}
+.middleQuickLink ul .icon_quick01 a{
+	background-position:0px 7px;
+}
+.middleQuickLink ul .icon_quick02 a{
+	background-position:-195px 7px;
+}
+.middleQuickLink ul .icon_quick03 a{
+	background-position:-379px 7px;
+}
+.middleQuickLink ul .icon_quick04 a{
+	background-position:-2px -23px
+}
+.middleQuickLink ul .icon_quick05 a{
+	background-position:-195px -23px
+}
+.middleQuickLink ul .icon_quick06 a{
+	background-position:-379px -23px
+}
+.middleQuickLink ul .icon_quick07 a{
+	background-position:0px -53px
+}
+.middleQuickLink ul .icon_quick08 a{
+	background-position:-195px -53px
+}
+.middleQuickLink ul .icon_quick09 a{
+	background-position:-379px -53px
+}
+
+/**/
+
+.buttonInviteWord{
+	padding-left:3px;
+}

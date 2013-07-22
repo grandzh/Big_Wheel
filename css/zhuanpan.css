@@ -1,0 +1,188 @@
+.rotater {
+	background-image: url(../img/zhuanpan.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 432px;
+	width: 432px;
+	position: relative;
+	margin-top: 48px;
+	margin-left: 48px;
+	left: 0px;
+	top: 0px;
+}
+.pointer{
+	background-image: url(../img/pointer.png);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 432px;
+	width: 432px;
+	position: absolute;
+	left: 50px;
+	top: 12px;
+}
+.luckyGame {
+	height: 480px;
+	width: 480px;
+	position: absolute;
+	left: 5px;
+	top: 0px;
+}
+.pointer .pointerButton {
+	height: 133px;
+	width: 133px;
+	z-index: 100;
+	position: absolute;
+	left: 148px;
+	top: 186px;
+}.happyLucky {
+	background-image: url(../img/zhuanpan_bg_03.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	height: 538px;
+	width: 980px;
+	margin-top: 8px;
+	position: relative;
+}
+.happyLucky .playDate {
+	color: #fe8902;
+	position: absolute;
+	font-size: 14px;
+	top: 32px;
+	right: 94px;
+}
+.happyLucky .playPrinciple {
+	line-height: 38px;
+}
+.happyLucky .playTitle {
+	line-height: 38px;
+	font-size: 18px;
+	left: 504px;
+	top: 171px;
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+}
+.happyLucky .playTitle span {
+	display: block;
+	float: left;
+	background-image: url(../img/qin.png);
+	background-position: 0px 0px;
+	height: 39px;
+	width: 45px;
+}
+.happyLucky .playPrinciple {
+	left: 506px;
+	top: 255px;
+	position: absolute;
+	color: #fff;
+	font-weight: bold;
+}
+.happyLucky .playPrinciple .principleContent {
+	background-image: url(../img/principle_content.png);
+	background-repeat: repeat;
+	height: 36px;
+	width: 255px;
+	position: relative;
+	padding-left: 5px;
+	float: left;
+	line-height: 36px;
+}
+.happyLucky .playPrinciple .principleContent .listNumber{
+	font-size: 35px;
+	position: absolute;
+	left: 2px;
+	right: 0px;
+}
+.happyLucky .playPrinciple .popupToolTip {
+	display: block;
+	float: left;
+	position: absolute;
+	left: 268px;
+	top: 5px;
+	font-size: 12px;
+	width: 101px;
+	color: #FFF;
+	text-decoration: none;
+}
+.happyLucky .toolTip {
+	padding: 10px;
+	width: 240px;
+	font-size: 12px;
+	line-height: 16px;
+	color: #666666;
+	background-image: url(../img/principle_content.png);
+	background-repeat: repeat;
+	position: absolute;
+}
+.happyLucky #principleOne {
+	left: 850px;
+	top: 238px;
+	border: 1px solid #fccb82;
+	display: none;
+}
+.happyLucky .testButton {
+	position: absolute;
+	height: 36px;
+	width: 126px;
+	right: 344px;
+	bottom: 167px;
+}
+.happyLucky .playButton {
+	position: absolute;
+	height: 36px;
+	width: 126px;
+	right: 193px;
+	bottom: 169px;
+}
+.happyLucky .playMsg {
+	position: absolute;
+	left: 487px;
+	bottom: 147px;
+	font-size: 12px;
+	color: #ffffff;
+	font-weight: normal;
+}
+.toolTip ul li {
+	background-image: url(../img/star_icon.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	text-indent: 18px;
+}
+.happyLucky .listWinners {
+	height: 76px;
+	width: 360px;
+	right: 72px;
+	bottom: 27px;
+	position: absolute;
+	font-size: 12px;
+}
+.happyLucky .listWinners h1 {
+	color: #ff7a00;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 34px;
+}
+.happyLucky .listWinners ul li {
+	float: left;
+	width: 180px;
+	line-height: 24px;
+}
+.happyLucky .listWinners ul li .redWords {
+	color: #ff0000;
+}
+.happyLucky .playPrinciple .principleContent .redWords {
+	color: #F3090F;
+	font-size: 20px;
+	padding: 3px;
+}
+.indexProduct .baoyouTitle {
+	font-family: "华文彩云";
+	font-size: 40px;
+	line-height: 50px;
+	color: #ff8e26;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px 0px;
+	margin-top: 15px;
+	clear: both;
+}

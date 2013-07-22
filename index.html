@@ -1,0 +1,419 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/main.css"/>
+<link rel="stylesheet" type="text/css" href="css/zhuanpan.css"/>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.rotate.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('.popupToolTip').hover(function(){
+		$($(this).attr('href')).stop(true,true).fadeIn('slow');	
+	},function(){
+		$($(this).attr('href')).stop(true,true).fadeOut('slow');
+	});
+	
+	
+	
+	$('.testButton').click(function(){
+		luckyRotate(1,0,'您一天有三次抽奖测试');  //test 模式
+		return false;
+	});
+	$('.playButton').click(function(){
+		luckyRotate(0,4);  //后台传参
+		return false;
+	});
+	
+	
+	//test 1为测试模式，0为正式模式
+	//type 为最后的结果
+	//msg 为后台附加内容
+	
+	function luckyRotate(test,rtype,rmsg){
+		var n=Math.floor(8*Math.random());//n : 0-7
+		var msg='';
+		var angleRange=0;
+		
+		function Gscroll(type){
+			switch(type){
+				case 0:msg='你没有次数再次抽奖';break;
+				case 1:angleRange=(360/7-1)*(Math.random()-0.5);msg='ipad mimi已送出,你迟来了一步';break;
+				case 2:angleRange=(360/7-1)*(Math.random()+0.5);msg='20速币';break;
+				case 3:angleRange=(360/7-1)*(Math.random()+1.5);msg='50速币';break;
+				case 4:angleRange=(360/7-1)*(Math.random()+2.5);msg='5元现金';break;
+				case 5:angleRange=(360/7-1)*(Math.random()+3.5);msg='10元现金';break;
+				case 6:angleRange=(360/7-1)*(Math.random()+4.5);msg='20元现金';break;
+				case 7:angleRange=(360/7-1)*(Math.random()+5.5);msg='100元现金';break;
+				
+			}
+			
+			m=360*(5+Math.floor(5*Math.random()))+angleRange;
+			return m;
+		}
+		if(test){
+		}
+		else{
+			n=rtype;
+		}
+		m=Gscroll(n);
+		
+		if(rmsg==undefined){
+			rmsg='';
+		}
+		
+		console.log(n,angleRange,msg,rmsg);
+		
+		$("#lucky").rotate({angle:0,animateTo:m,duration:5000,callback:function(){
+					
+					if(test){
+						msg=msg+'此数据为测试结果'+rmsg;
+						
+					}
+					else{
+						msg=msg+rmsg;
+					}
+						
+					alert(msg);
+				}
+		
+			});
+		}
+	
+});
+</script>
+</head>
+
+<body class="home">
+<div class="page-body">
+	<div class="wrapper clearfix">
+		<div class="happyLucky">
+			<div class="playDate">活动时间 5.22-6.30</div>
+			<div class="playTitle"><span></span>~您可以任选一种方式参加活动哦！</div>
+			<div class="playPrinciple">
+				<div class="principleContent">订单满<span class="redWords">9.9元</span>即可转好运</div>
+				<a href="#principleOne" class="popupToolTip">详情规则<span class="shineyWords">>>></span></a> </div>
+			<div class="toolTip" id="principleOne">
+				<ul>
+					<li>淘宝订单满9.9元，在确认收货，集分宝到账后，即可获得1次“转好运”机会。</li>
+					<li>转好运”活动中奖率100%，订单数量越多，转好运机会越多。（作弊无效，如有疑问可咨询在线客服）</li>
+				</ul>
+			</div>
+			
+			<!--<div class="playPrinciple">
+				<div class="principleContent"><span>2</span>邀请好友,即可转好运<span class="redWords">3次</span></div>
+				<a href="#principleTwo" class="popupToolTip">详细规则</a>
+			</div>
+			<div class="toolTip" id="principleTwo">
+				<ul>
+					<li>每邀请3位好友成功登陆速买易，即可获得3次“转好运”机会。另外，邀请的好友返利还可以获得最高5元现金奖励。</li>
+					<li>转好运”活动中奖率100%（作弊无效，如有疑问可咨询在线客服）</li>
+				</ul>
+			</div>--> 
+			<a href="" class="testButton"></a> <a href="" class="playButton"></a>
+			<div class="playMsg">试玩：每位会员每天有三次试玩机会.</div>
+			<div class="listWinners">
+				<h1>中奖名单</h1>
+				<ul>
+					<li>恭喜会员qi**72:抽中<span class="redWords">5元红包</span></li>
+					<li>恭喜会员qi**72:抽中<span class="redWords">5元红包</span></li>
+					<li>恭喜会员qi**72:抽中<span class="redWords">5元红包</span></li>
+					<li>恭喜会员qi**72:抽中<span class="redWords">5元红包</span></li>
+				</ul>
+			</div>
+			<div class="luckyGame">
+				<div class="rotater"> <img src="img/zhuanpan.png" id="lucky"/> </div>
+				<div class="pointer">
+					<div class="pointerButton"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper clearfix">
+		<div class="product-list body-block">
+			<div class="block-main indexProduct">
+				<div class="baoyouTitle">9.9元包邮区</div>
+				<div class="product first">
+					<h3 class="product-header">[海绵宝宝限量版]AFU阿芙神采美目复方油 改善黑眼圈 眼部精油</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9959" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/10310021529354921/T1hF8_XDhbXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="[海绵宝宝限量版]AFU阿芙神采美目复方油 改善黑眼圈 眼部精油" width="275" height="275" style="opacity: 1;"></a></div>
+						<div class="reward">返利464集分宝（价值4.64元）</div>
+						<div class="old-price"><del>129.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥129</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9959" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">水木萃白面部护理面霜化妆品补水套装保湿美白护肤品套装正品包邮</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9958" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/10763021641827949/T1inppXxheXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="水木萃白面部护理面霜化妆品补水套装保湿美白护肤品套装正品包邮" width="275" height="275"></a></div>
+						<div class="reward">返利289集分宝（价值2.89元）</div>
+						<div class="old-price"><del>369.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥69</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9958" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">蜗牛原液去红血丝精华液美白淡斑 玻尿酸安瓶新娘专用定妆液 正品</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9960" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/15847021521493152/T11Od9XCtaXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="蜗牛原液去红血丝精华液美白淡斑 玻尿酸安瓶新娘专用定妆液 正品" width="275" height="275" style="opacity: 1;"></a></div>
+						<div class="reward">返利130集分宝（价值1.3元）</div>
+						<div class="old-price"><del>68.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥10</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9960" class="more picmore">去看看</a></div>
+				</div>
+				
+				<div class="baoyouTitle">19.9元包邮区</div>
+				<div class="product first">
+					<h3 class="product-header">韩都衣舍韩国2013夏装新款女装圆领条纹蝙蝠袖短袖T恤JM1007蒖圻</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9961" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/17957019612618141/T1Wx4bXuXhXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="韩都衣舍韩国2013夏装新款女装圆领条纹蝙蝠袖短袖T恤JM1007蒖圻" width="275" height="275"></a></div>
+						<div class="reward">返利352集分宝（价值3.52元）</div>
+						<div class="old-price"><del>98.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥98</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9961" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">预售天使之城 春装 星条图案 字母印花 修身T恤 女 YH3660</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9962" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/11526020003345670/T1DulwXrtbXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="预售天使之城 春装 星条图案 字母印花 修身T恤 女 YH3660" width="275" height="275"></a></div>
+						<div class="reward">返利356集分宝（价值3.56元）</div>
+						<div class="old-price"><del>99.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥99</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9962" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">毛衣开衫中长款防晒衣 韩版防晒衫薄款大码宽松毛衣针织衫女77131</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-9963" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/19839032636592185/T1MMtpXwBaXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="毛衣开衫中长款防晒衣 韩版防晒衫薄款大码宽松毛衣针织衫女77131" width="275" height="275"></a></div>
+						<div class="reward">返利239集分宝（价值2.39元）</div>
+						<div class="old-price"><del>49.90元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥50</div>
+						<a href="http://new.sugou.com/item-notlogin-id-9963" class="more picmore">去看看</a></div>
+				</div>
+				
+				<div class="baoyouTitle">29.9元包邮区</div>
+				
+				<div class="product first">
+					<h3 class="product-header">太平鸟女装2013春装新品 瑞丽甜美条纹雪纺连衣裙 时尚修身短裙女</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-13373" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/14247031624560435/T1Wr37XgXXXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="太平鸟女装2013春装新品 瑞丽甜美条纹雪纺连衣裙 时尚修身短裙女" width="275" height="275"></a></div>
+						<div class="reward">返利820集分宝（价值8.2元）</div>
+						<div class="old-price"><del>429.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥228</div>
+						<a href="http://new.sugou.com/item-notlogin-id-13373" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">年终年底清仓特价 波司登羽绒裤 男正品 内穿中老年羽绒裤SR2415</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-13139" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1cTbKXhVqXXagUnDb_125344.jpg_290x290.jpg" title="" alt="年终年底清仓特价 波司登羽绒裤 男正品 内穿中老年羽绒裤SR2415" width="275" height="275"></a></div>
+						<div class="reward">返利612集分宝（价值6.12元）</div>
+						<div class="old-price"><del>180.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥170</div>
+						<a href="http://new.sugou.com/item-notlogin-id-13139" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">听浪泳衣 保守显瘦加肥加大码连体裙式平角裤女泳装 泡温泉游泳衣</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-12432" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1cW23XgxcXXaiUt7Z_032059.jpg_290x290.jpg" title="" alt="听浪泳衣 保守显瘦加肥加大码连体裙式平角裤女泳装 泡温泉游泳衣" width="275" height="275"></a></div>
+						<div class="reward">返利619集分宝（价值6.19元）</div>
+						<div class="old-price"><del>78.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥69</div>
+						<a href="http://new.sugou.com/item-notlogin-id-12432" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">no where春新款女装特色拉链小西装短款外套212006</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-187" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/T1uCvYXixhXXafhAoW_024307.jpg_290x290.jpg" title="" alt="no where春新款女装特色拉链小西装短款外套212006" width="275" height="275"></a></div>
+						<div class="reward">返利2512集分宝（价值25.12元）</div>
+						<div class="old-price"><del>319.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥223</div>
+						<a href="http://new.sugou.com/item-notlogin-id-187" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">韩式超豪华大拖尾婚纱 2013最新款婚纱礼服 韩版抹胸公主宫廷婚纱</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-10460" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1swDrXc8tXXa2xM.V_020644.jpg_290x290.jpg" title="" alt="韩式超豪华大拖尾婚纱 2013最新款婚纱礼服 韩版抹胸公主宫廷婚纱" width="275" height="275"></a></div>
+						<div class="reward">返利2497集分宝（价值24.97元）</div>
+						<div class="old-price"><del>388.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥287</div>
+						<a href="http://new.sugou.com/item-notlogin-id-10460" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">韩国进口代购 街头中性风 后拉链条纹宽松T恤 13032807</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-11272" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/14539033801472315/T1uv8VXqxdXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="韩国进口代购 街头中性风 后拉链条纹宽松T恤 13032807" width="275" height="275"></a></div>
+						<div class="reward">返利763集分宝（价值7.63元）</div>
+						<div class="old-price"><del>159.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥159</div>
+						<a href="http://new.sugou.com/item-notlogin-id-11272" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">太平鸟西装 2013春装新款正品 休闲西服/时尚休闲外套80212125004</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-13332" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/15708019274978318/T1tz3WXaJbXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="太平鸟西装 2013春装新款正品 休闲西服/时尚休闲外套80212125004" width="275" height="275"></a></div>
+						<div class="reward">返利1184集分宝（价值11.84元）</div>
+						<div class="old-price"><del>780.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥329</div>
+						<a href="http://new.sugou.com/item-notlogin-id-13332" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">2013春夏欧美女装新款 宫廷唯美 宗教特色蕾丝绣花连衣裙 57978</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-10275" class="picmore"><img src="http://img04.taobaocdn.com/bao/uploaded/i4/16383034237028307/T1t4F8XB8dXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="2013春夏欧美女装新款 宫廷唯美 宗教特色蕾丝绣花连衣裙 57978" width="275" height="275"></a></div>
+						<div class="reward">返利864集分宝（价值8.64元）</div>
+						<div class="old-price"><del>384.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥288</div>
+						<a href="http://new.sugou.com/item-notlogin-id-10275" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">包邮#特大码女装 冬装胖妹妹特色领口呢料背心连衣裙 高贵气质</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-286" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/T1EVEBXmxaXXal1c.4_052337.jpg_290x290.jpg" title="" alt="包邮#特大码女装 冬装胖妹妹特色领口呢料背心连衣裙 高贵气质" width="275" height="275"></a></div>
+						<div class="reward">返利676集分宝（价值6.76元）</div>
+						<div class="old-price"><del>188.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥188</div>
+						<a href="http://new.sugou.com/item-notlogin-id-286" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">比伦奴 2013春装新品 修身女士机车小皮衣女PU外套皮夹克短款1147</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-10063" class="picmore"><img src="http://img04.taobaocdn.com/bao/uploaded/i4/T1mdDCXXpjXXcIzds9_103054.jpg_290x290.jpg" title="" alt="比伦奴 2013春装新品 修身女士机车小皮衣女PU外套皮夹克短款1147" width="275" height="275"></a></div>
+						<div class="reward">返利1461集分宝（价值14.61元）</div>
+						<div class="old-price"><del>240.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥168</div>
+						<a href="http://new.sugou.com/item-notlogin-id-10063" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">2013年春季时尚韩版名媛优雅修身蕾丝拼接网纱钉珠装饰连衣裙</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-10991" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/10910033723360266/T1hV8JXz4iXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="2013年春季时尚韩版名媛优雅修身蕾丝拼接网纱钉珠装饰连衣裙" width="275" height="275"></a></div>
+						<div class="reward">返利936集分宝（价值9.36元）</div>
+						<div class="old-price"><del>259.99元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥260</div>
+						<a href="http://new.sugou.com/item-notlogin-id-10991" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">歌莉娅同款 2013春季新款欧根纱吊带裙 蕾丝无袖连衣裙33E4A460</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-13264" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/12396033357476224/T1w.NjXqpgXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="歌莉娅同款 2013春季新款欧根纱吊带裙 蕾丝无袖连衣裙33E4A460" width="275" height="275"></a></div>
+						<div class="reward">返利2016集分宝（价值20.16元）</div>
+						<div class="old-price"><del>168.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥168</div>
+						<a href="http://new.sugou.com/item-notlogin-id-13264" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">金格尔温泉泳衣女小胸钢托聚拢比基尼分体裙式1331A三件套泳装</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-12950" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/18628019421769265/T1py72XeFeXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="金格尔温泉泳衣女小胸钢托聚拢比基尼分体裙式1331A三件套泳装" width="275" height="275"></a></div>
+						<div class="reward">返利745集分宝（价值7.45元）</div>
+						<div class="old-price"><del>138.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥83</div>
+						<a href="http://new.sugou.com/item-notlogin-id-12950" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">花开了原创个性休闲女装衬衫宽松上衣长袖短款镂空特色欧美 衬衫</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-266" class="picmore"><img src="http://img03.taobaocdn.com/bao/uploaded/i3/T19qKDXfXsXXc9oJ37_063949.jpg_290x290.jpg" title="" alt="花开了原创个性休闲女装衬衫宽松上衣长袖短款镂空特色欧美 衬衫" width="275" height="275"></a></div>
+						<div class="reward">返利2094集分宝（价值20.94元）</div>
+						<div class="old-price"><del>698.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥698</div>
+						<a href="http://new.sugou.com/item-notlogin-id-266" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">新款大牌秋装韩国SZ正品气质韩版蝙蝠长袖裙子修身连衣裙女 特价</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-13471" class="picmore"><img src="http://img07.taobaocdn.com/bao/uploaded/i7/T1fyTtXbBjXXcT_IwW_023012.jpg_290x290.jpg" title="" alt="新款大牌秋装韩国SZ正品气质韩版蝙蝠长袖裙子修身连衣裙女 特价" width="275" height="275"></a></div>
+						<div class="reward">返利672集分宝（价值6.72元）</div>
+						<div class="old-price"><del>160.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥112</div>
+						<a href="http://new.sugou.com/item-notlogin-id-13471" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">NORDICWINDS包邮 2013春夏短袖 连体裤 欧美连衣裤 连身裤休闲裤</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-11489" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/10216019200354685/T1gzkSXkpXXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="NORDICWINDS包邮 2013春夏短袖 连体裤 欧美连衣裤 连身裤休闲裤" width="275" height="275"></a></div>
+						<div class="reward">返利960集分宝（价值9.6元）</div>
+						<div class="old-price"><del>188.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥128</div>
+						<a href="http://new.sugou.com/item-notlogin-id-11489" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">圣妮思 特色领冬装新品韩版羊毛呢大衣女装 修身毛呢外套 G20810</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-8" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/T1EKYfXdtmXXXvyygU_014850.jpg_290x290.jpg" title="" alt="圣妮思 特色领冬装新品韩版羊毛呢大衣女装 修身毛呢外套 G20810" width="275" height="275"></a></div>
+						<div class="reward">返利1829集分宝（价值18.29元）</div>
+						<div class="old-price"><del>198.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥198</div>
+						<a href="http://new.sugou.com/item-notlogin-id-8" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">2013欧洲站春装新款女装百褶翻领连衣裙明星礼服裙小香风名媛2340</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-10975" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/10616019713823001/T11B0XXpdjXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="2013欧洲站春装新款女装百褶翻领连衣裙明星礼服裙小香风名媛2340" width="275" height="275"></a></div>
+						<div class="reward">返利2358集分宝（价值23.58元）</div>
+						<div class="old-price"><del>393.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥393</div>
+						<a href="http://new.sugou.com/item-notlogin-id-10975" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product first">
+					<h3 class="product-header">2013新款大爱推荐圆领修身时尚不规则特色条纹女装连衣裙xaqv-#</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-445" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/18422020318650949/T16yXGXCxcXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="2013新款大爱推荐圆领修身时尚不规则特色条纹女装连衣裙xaqv-#" width="275" height="275"></a></div>
+						<div class="reward">返利983集分宝（价值9.83元）</div>
+						<div class="old-price"><del>328.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥328</div>
+						<a href="http://new.sugou.com/item-notlogin-id-445" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">采多宝大码女装秋冬新款圆领特色链扣大衣外套-A2117</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-501" class="picmore"><img src="http://img02.taobaocdn.com/bao/uploaded/i2/11372018703090187/T1yBMnXlXeXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="采多宝大码女装秋冬新款圆领特色链扣大衣外套-A2117" width="275" height="275"></a></div>
+						<div class="reward">返利1788集分宝（价值17.88元）</div>
+						<div class="old-price"><del>298.00元</del></div>
+						<!--div class="time-left">结束时间：04月11日 23:59:59</div-->
+						<div class="price">￥298</div>
+						<a href="http://new.sugou.com/item-notlogin-id-501" class="more picmore">去看看</a></div>
+				</div>
+				<div class="product">
+					<h3 class="product-header">优诗溢长袖睡裙 女 纯棉 春秋居家服休闲V领印花大码睡衣家居服夏</h3>
+					<div class="product-body">
+						<div class="pic"><a href="http://new.sugou.com/item-notlogin-id-12674" class="picmore"><img src="http://img01.taobaocdn.com/bao/uploaded/i1/18874031616044390/T1Cwc6XjpbXXXXXXXX_!!0-item_pic.jpg_290x290.jpg" title="" alt="优诗溢长袖睡裙 女 纯棉 春秋居家服休闲V领印花大码睡衣家居服夏" width="275" height="275"></a></div>
+						<div class="reward">返利660集分宝（价值6.6元）</div>
+						<div class="old-price"><del>138.00元</del></div>
+						<!--div class="time-left">结束时间：04月12日 23:59:59</div-->
+						<div class="price">￥88</div>
+						<a href="http://new.sugou.com/item-notlogin-id-12674" class="more picmore">去看看</a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
